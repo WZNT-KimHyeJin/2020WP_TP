@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+#base{
+    border: black solid 2px;
+    width: 700px;
+    height: 500px;
+}
+#starting{
+    border: black solid 2px;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+
+}
+#success{
+    width: 450px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    
+}
+#score{
+    width: 450px;
+    height: 60px;
+    border: steelblue solid 4px;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+#butt
+#buttons{
+    float: left;
+}
+
+#btn_start{
+    border: tomato solid 3px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-top: 30px;
+    padding-left:80px;
+    padding-bottom: 30px;
+    padding-right:80px;
+}
+
+#btn_stop{
+    border: tomato solid 3px;
+    margin-left: 20px;
+    padding-top: 30px;
+    padding-left:80px;
+    padding-bottom: 30px;
+    padding-right:80px;
+    margin-top: 15px;
+}

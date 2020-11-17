@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>termProject</title>
+    <link rel ="stylesheet" href ="play.css" />
+</head>
+<body>
+    <div id="back">
+        
+        <div id="top_div">
+                <div id="chance_div"width="200px" height="50px"> </div>
+                <div id="socre_div" width="200px" height="50px"></div>
+                <div id ="time_div" width="200px" height="50px">남은시간 : <span id = "timecheck"></span></div>
+                <div id ="setting_div"  width="200px" height="50px" >
+                    <button id="setting_btn">설정</button>
+                    <div id="dropdown">
+                        <button id ="mute" class="popBtns">🔇</button>
+                        <button id ="stop" class="popBtns">❌</button>
+                        <button id="move_to_Bonus" class="popBtns">🎁</button>
+                    </div>
+                </div>
+        </div>
+        <div id="main">
+            <canvas id="backgroundCanvas" width="680px" height="300px"></canvas>
+        </div>
+
+        <div id="keyDiv">
+            ➡ ⬅ ⬆ ⬇ ⬆ ⬅ ➡ ⬆
+        </div>
+    </div>
+
+    <script src ="play.js"></script>
+</body>
+</html>

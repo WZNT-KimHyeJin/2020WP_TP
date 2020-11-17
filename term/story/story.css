@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+#base{
+    border: black solid 2px;
+    width: 700px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.5);
+}
+#contents{
+    height: 30%;
+    width: 98%;
+    border: 2px solid black;
+    margin-top: 49%;
+    margin-left: 5px;
+}
+#chr{
+    height: 100%;
+    width: 25%;
+    border: blue 2px dotted;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+    background-color: white;
+}
+#stories{
+    height: 90%;
+    width: 71%;
+    border: double rebeccapurple 2px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: thistle;
+}
+#btn_next{
+    float: right;
+    margin-top: 95px;
+    margin-right: 20px;
+}
