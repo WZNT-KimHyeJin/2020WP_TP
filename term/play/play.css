@@ -85,3 +85,9 @@ align-items: center;
     
 }
 
+#keyTable{
+    padding-left: 8%;
+}
+#keyTable tr td{
+    padding-left: 15px;
+}

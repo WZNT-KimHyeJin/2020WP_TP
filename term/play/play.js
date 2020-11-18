@@ -2,10 +2,11 @@ var canvas = document.getElementById('backgroundCanvas');
 var chance = document.getElementById('chance_div');
 var score = document.getElementById('socre_div');
 var playTime = document.getElementById('time_div');
+var tableRow = document.getElementById('tableRow');
 
 
 var chances = ["😻","😻","😻"];
-var stageTime = 20;
+var stageTime = 15;
 
 
 
@@ -15,10 +16,36 @@ window.onload = function(){
    setChance();
    var score_text = "0";
    score.appendChild(document.createTextNode(score_text));
+   arrow(stageBonus());
    timer(stageTime);
+  
 }
+// 키보드 입력 받는  함수
+window.onkeydown=function(event){  
 
-document.getElementById("dropdown").addEventListener(function(){
+   if(event.keyCode == 37){ //좌
+
+      alert("아 뿅");
+
+   }else if(event.keyCode == 38){//상
+
+      window.document.body.backgroundColor="white";
+
+   } else if(event.keyCode == 39){//우
+
+      window.document.body.backgroundColor="blue";
+
+   }else if(event.keyCode == 40){//하
+
+      window.document.body.backgroundColor="green";
+
+   }else{
+      console.log(event.keyCode);
+   }
+
+};
+
+document.getElementById("dropdown").addEventListener("click",function(){
    //설정 버튼을 클릭하였을 때의 드롭다운 리스트를 구현한다.
 });
 
@@ -78,6 +105,10 @@ function stage1(){
   /*
   좌,우 키를 사용하여 7개의 노트 무작위 생성
    */
+  var stage_1_notes = new Array();
+  stage_1_notes= randomKeyNum_low(38, 37, 7);
+  console.log(stage_1_notes);
+  return stage_1_notes;
 }
 
 function stage2(){
@@ -85,27 +116,101 @@ function stage2(){
   /*
   좌, 우, 상, 하 키를 사용하여 7개의 노트 무작위 생성
    */
+  var stage_2_notes = new Array(); 
+  stage_2_notes= randomKeyNum_low(40, 37, 7);
+  return stage_2_notes;
 }
 function stage3(){
   //7단계~9단계의 무작위의 노트를 생성하는 함수
   /*
   상,하,좌,우, 스페이스 바를 사용하여 9개의 노트 무작위 생성
    */
+  var stage_3_notes = new Array();
+   stage_3_notes = randomKeyNum_high(9);
+  return stage_3_notes;
 }
-function staageFinal(){
+function stageFinal(){
   //10단계의 무작위 노트를 생성하는 함수
   //상 하 좌 우 스페이스바를 사용하여 12개의 노트 무작위 생성
   // 7초 카운트
+   stageTime=7;
+   var stage_f_notes = new Array();
+   stage_f_notes = randomKeyNum_high(12);
+   console.log(stage_f_notes);
+   return stage_f_notes;
 }
 
 function stageBonus(){
   //보너스 단계의 무작위 노트를생성하는 함수
   // 상 하 좌 우 스페이스 바를 사용하여 20개의 노트 무작위 생성.
   //7초 카운트
+  stageTime=7;
+  var stage_b_notes = new Array();
+  stage_b_notes = randomKeyNum_high(20);
+   return stage_b_notes;
+
 }
 
-function arrow(){
-   //화살표를 랜덤으로 생성하여 html에 전송하는 함수
+var arrowArr = new Array();
+function arrow(array){
+   //화살표를 생성하여 html에 전송하는 함수
+   while(tableRow.firstChild){
+      tableRow.removeChild(tableRow.firstChild);
+   }
+   var stringArrow;
+   for(var i=0; i<array.length;i++){
+      switch(array[i]){
+         case 37 : 
+         stringArrow="⬅";
+         break;
+         case 38 : 
+         stringArrow="⬆";
+         break;
+         case 39 : 
+         stringArrow="➡";
+         break;
+         case 40 : 
+         stringArrow="⬇";
+         break;
+         case 32 : 
+         stringArrow="◾";
+         break;
+      }
+      var data = tableRow.insertCell(i);
+      console.log(data);
+      console.log(stringArrow);
+      data.innerHTML = stringArrow;
+      
+      // tableRow.appendChild(data);
+
+   }
+  
+
 }
+
+function randomKeyNum_low(start, finish, noteNum){
+   var stageArr = new Array();
+   for(var i =0; i<noteNum; i++){
+      var arrowNum = Math.floor(Math.random()*(start+1 - finish))+finish;
+      stageArr.push(arrowNum);
+   }
+   return stageArr;
+}
+function randomKeyNum_high(noteNum){
+   var stageArr = new Array();
+   for(var i =0; i<noteNum; i++){
+      var check =Math.floor(Math.random()*5);
+      var arrowNum;
+      if(check==0){
+          arrowNum =32;
+       }else{
+          arrowNum = Math.floor(Math.random()*(41 - 37))+37;
+       }
+    stageArr.push(arrowNum);
+   }
+   return stageArr;
+}
+
+
 
 
