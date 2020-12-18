@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>termProject</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel ="stylesheet" href ="play.css" />
 </head>
 <body>
+    <div id="stageClearBackDiv" >
+        <div>
+            <div id="stageClearDiv">
+                <div id="success">SUCCESS</div>
+                <div id="stageClear_scoreDiv"></div>
+                <div id="stageClear_buttons">
+                    <button id="stageClear_quit">종료하기</button>
+                    <button id="stageClear_keepGoing">계속하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stageFailBackDiv" >
+        <div>
+            <div id="stageFailDiv">
+                <div id="lose">LOSE</div>
+                <div id="stageFail_scoreDiv"></div>
+                <div id="stageFail_buttons">
+                    <button id="stageFail_quit">종료하기</button>
+                    <button id="stageFail_restart">다시하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="back">
         
         <div id="top_div">
@@ -22,20 +48,16 @@
                     </div>
                 </div>
         </div>
-        <div id="main">
-            <canvas id="backgroundCanvas" width="680px" height="300px"></canvas>
+        <div id="mainDiv">
+            <div id="imgDiv">
+
+            </div>
         </div>
 
         <div id="keyDiv">
             <table id="keyTable">
                 <tr id="tableRow">
-                    <td>⬆</td>
-                    <td>⬅</td>
-                    <td>⬇</td>
-                    <td>⬅</td>
-                    <td>➡</td>
-                    <td>⬅</td>
-                    <td>➡</td>
+                   
                 </tr>
             </table>
         </div>

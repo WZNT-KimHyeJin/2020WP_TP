@@ -12,11 +12,14 @@ document.getElementById("btn_settings").addEventListener("click",
 });
 document.getElementById("btn_start").addEventListener("click",
     function(){
+        location.href="/Users/LG/Desktop/웹프텀프/term/play/play.html";
+
         /*
         게임시작 버튼 클릭 시 게임 진행 화면으로 이동
         틀만 구현 해두었기 때문에 html로 화면전환을 할지, 
         게임 진행 창에서 div를 사용하여 화면위에 잠시 띄울 지 고민중이다.
          */ 
+
 
 });
 

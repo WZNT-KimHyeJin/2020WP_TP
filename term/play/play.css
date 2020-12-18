@@ -1,21 +1,17 @@
-#backgroundCanvas{
-    border: 2px black solid;
-}
+
 #keyDiv{
+    /* display: block; */
+
     border: 5px purple dotted;
     width: 680px;
     height: 100px;
     margin-left: 5px;
     margin-top: 10px;
-    /* padding-bottom: 200px; */
     text-align: center;
     font-size: 70px;
+    border-radius: 10px;
 }
-#back{
-    width: 700px;
-    height: 500px;
-    /* padding-top: 5px; */
-}
+
 body{
 margin: 0;
 height: 100vh;
@@ -23,13 +19,94 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-#main{
+
+/* stage Clear Div 관련 적용 */
+#stageClearBackDiv, #stageFailBackDiv{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#stageClearBackDiv>div, #stageFailBackDiv>div{
+    border: darkblue solid 4px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#stageClearBackDiv>div>div, #stageFailBackDiv>div>div{
+    width: 400px;
+    height: 300px;
+    border: steelblue solid 3px;
+    background-color: wheat;
+}
+#stageClearBackDiv>div>div #success, #stageFailBackDiv>div>div #lose{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+#stageClearBackDiv>div>div #stageClear_scoreDiv,
+#stageFailBackDiv>div>div #stageFail_scoreDiv{
+    border: dotted 7px purple;
+    font-size: 40px;
+    background-color: cornsilk;
+    color: black;
+    font-weight: 700;
+    margin-left: 43px;
+    width: 300px;
+    text-align: center;
+    margin-top: 10px;
+}
+#stageClearBackDiv>div>div #stageClear_buttons>button,
+#stageFailBackDiv>div>div #stageFail_buttons>button{
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: salmon;
+    border: orange solid 3px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+#stageClearBackDiv>div>div #stageClear_buttons>button:hover,
+#stageFailBackDiv>div>div #stageFail_buttons>button:hover{
+    background-color: orange;
+    color: white;
+    border: tomato solid 2px;
+}
+
+
+#back{
+    width: 700px;
+    height: 500px;
+    /* padding-top: 5px; */
+}
+#mainDiv{
+    /* display: block; */
     height: 300px;
     margin-top: 75px;
-    margin-left: 5px
+    margin-left: 5px;
+    border: 2px blue solid;
+    width:680px;
+}
+#imgDiv{
+    border: darkgoldenrod solid 4px;
+    width: 170px; 
+    height: 200px;
 }
 #back{
     border: 3px black solid;
+    /* display: block; */
 }
 #chance_div,#socre_div,#time_div,#setting_div{
     height: 50px;
@@ -38,6 +115,8 @@ align-items: center;
 
 
 #top_div{
+    /* display: block; */
+
     float: left;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -54,8 +133,9 @@ align-items: center;
 #socre_div{
     width: 150px;
     margin-left: 20px;
-    background-color: green;
+    border: violet solid 3px;
     text-align: center;
+    font-size: 37px;
 }
 #time_div{
     width: 150px;
@@ -85,9 +165,19 @@ align-items: center;
     
 }
 
-#keyTable{
-    padding-left: 8%;
+#keyTable tr{
+    margin: 0;
+    background-color: lightskyblue;
 }
 #keyTable tr td{
-    padding-left: 15px;
+    /* padding-left: 15px; */
+    margin:0 auto;
+    font-size: 30px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: lightpink;
+    border: lightcoral 5px solid;
+    margin-left: 30px;
+    margin-right: 10px;
 }
+

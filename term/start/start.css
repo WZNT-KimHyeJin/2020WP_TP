@@ -23,9 +23,15 @@ body{
     border: steelblue solid 4px;
     margin-left: 20px;
     margin-top: 20px;
+    font-size: xx-large;
+    text-align: center;
 }
 #buttons{
     float: left;
+}
+button:hover{
+    background-color: antiquewhite;
+    border: coral 2px solid;
 }
 
 #btn_start{
