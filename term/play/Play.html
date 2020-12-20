@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>termProject</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel ="stylesheet" href ="Play.css" />
+</head>
+<body>
+    <div id="stageClearBackDiv" >
+        <div>
+            <div id="stageClearDiv">
+                <div id="success">SUCCESS</div>
+                <div id="stageClear_scoreDiv"></div>
+                <div id="stageClear_buttons">
+                    <button id="stageClear_quit">종료하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageClear_keepGoing">계속하기 <i class='fas fa-paw' ></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stageFailBackDiv" >
+        <div>
+            <div id="stageFailDiv">
+                <div id="lose">LOSE</div>
+                <div id="stageFail_scoreDiv"></div>
+                <div id="stageFail_buttons">
+                    <button id="stageFail_quit">종료하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageFail_restart_thisStage">다시하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageFail_restart">돌아가기 <i class='fas fa-paw' ></i></button>
+                </div>
+                <div id="restart_this">
+                    한번의 chance로 현재 스테이지를 다시 진행합니다.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="back">
+        
+        <div id="top_div">
+                <div id="chance_div"width="200px" height="50px"><span id="chance_inner"> </span></div>
+                <div id="socre_div" width="200px" height="50px"></div>
+                <div id ="time_div" width="200px" height="50px"><span id = "timecheck">00:00</span></div>
+                <div id ="setting_div"  width="200px" height="50px" >
+                    <button id="setting_btn"><i class="fa fa-gear"></i></button>
+                    <div id="setting_buttons_div">
+                        <button id ="mute" class="popBtns">음소거 <i class='fas fa-volume-mute'></i></button>
+                        <button id ="stop" class="popBtns">종료 <i class='far fa-stop-circle'></i></button>
+                        <button id="move_to_Bonus" class="popBtns">보너스 <i class='fas fa-gift'></i></button>
+                    </div>
+                </div>
+        </div>
+        <div id="mainDiv">
+            <div id="imgDiv">
+
+            </div>
+        </div>
+
+        <div id="keyDiv">
+            <table id="keyTable">
+                <tr id="tableRow_1">
+                   
+                </tr>
+                <tr id="tableRow_2">
+                   
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src ="play.js"></script>
+</body>
+</html>

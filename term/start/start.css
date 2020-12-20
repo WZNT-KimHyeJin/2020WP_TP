@@ -7,57 +7,110 @@ body{
     }
 #base{
     border: black solid 2px;
+    background-image:url(../images/발바닥.jpg);
+    background-size: 70px;
+    background-repeat: repeat;
     width: 700px;
     height: 500px;
 }
 #starting{
-    border: black solid 2px;
+    border: rgb(255, 219, 151) solid 5px;
+    
     width: 500px;
     height: 300px;
     margin: auto;
     margin-top: 100px;
+    background-color: rgb(251, 239, 216);
+    border-radius: 10px;
+    background-size:40px 40px;
+
 }
 #game_title{
-    width: 450px;
-    height: 150px;
-    border: steelblue solid 4px;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: xx-large;
+    background-image:url(../images/title.png);
+    background-size: 550px 180px;
+    width: 430px;
+    height: 65px;
+    border: rgb(255, 219, 151) solid 5px;
+    background-color: rgb(255, 251, 233);
+
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 45px;
+    padding-bottom: 45px;
     text-align: center;
 }
-#buttons{
+.buttons{
     float: left;
+    margin-left: 10px;
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 199, 154);
+    color:  rgb(151, 99, 3);
+    font-weight: bold;
+    border: orange solid 4px;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 70px;
 }
-button:hover{
-    background-color: antiquewhite;
-    border: coral 2px solid;
-}
-
-#btn_start{
-    border: tomato solid 3px;
-    margin-left: 40px;
-    padding-top: 30px;
-    padding-left:80px;
-    padding-bottom: 30px;
-    padding-right:80px;
-}
-#btn_settings{
-    border: tomato solid 3px;
-    padding-top: 30px;
-    padding-right:20px;
-    padding-bottom: 30px;
-    padding-left:20px;
-    margin-left: 20px;
-    margin-top: 17px;
-
+.buttons:hover{
+    background-color: rgb(255, 192, 185);
+    color: white;
+    border: rgb(240, 105, 105) 4px solid;
+    font-size: 23px;
 }
 #btn_info{
-    border: tomato solid 3px;
-    padding-top: 30px;
-    padding-right:20px;
-    padding-bottom: 30px;
-    padding-left:20px;
-    margin-left: 30px;
-    margin-top: 17px;
+    margin-left: 25px;
+}
+#btn_start{
+    width: 230px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#btn_start:hover{
+    
+    font-size: 35px;
+}
+#btn_bonus{
+    font-size: 12px;
+    height: 40px;
+    margin-left: 655px;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: pink;
+    color: rgb(97, 10, 24);
+}
+#btn_bonus:hover{
+    background-color: rgb(212, 105, 123);
+    color: rgb(255, 255, 255);
+    border: rgb(255, 202, 197) 4px solid;
+   
+}
+
+/* information div 관련 적용 */
+#infoBackDiv{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#infoBackDiv>div{
+    width: 50px;
+    height: 50px;
+    border: olivedrab solid 3px;
 }

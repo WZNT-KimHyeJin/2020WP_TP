@@ -1,0 +1,288 @@
+
+
+
+body{
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+/* stage Clear, Fail Div 관련 적용 */
+
+ #stageFailBackDiv,#stageClearBackDiv{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#stageClearBackDiv>div, #stageFailBackDiv>div{
+    border: black solid 2px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#stageClearBackDiv>div>div, #stageFailBackDiv>div>div{
+    width: 400px;
+    height: 300px;
+    border: rgb(255, 219, 151) solid 5px;
+    border-radius: 10px;
+    background-color: rgb(251, 239, 216);
+}
+ #stageFailBackDiv>div>div #lose{
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(200, 60, 17);
+    margin-top: 15px;
+}
+#stageClearBackDiv>div>div #success{
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(255, 94, 0);
+    margin-top: 15px;
+}
+#stageClearBackDiv>div>div #stageClear_scoreDiv,
+#stageFailBackDiv>div>div #stageFail_scoreDiv{
+    border: dotted 7px rgb(255, 178, 36);
+    font-size: 40px;
+    background-color: rgb(255, 251, 233);
+    color: black;
+    font-weight: 700;
+    margin-left: 43px;
+    width: 300px;
+    text-align: center;
+    margin-top: 10px;
+}
+#stageClearBackDiv>div>div #stageClear_buttons>button{
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 199, 154);
+    color:  rgb(180, 117, 0);
+    font-weight: bold;
+    border: orange solid 3px;
+    margin-left: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#stageFailBackDiv>div>div #stageFail_buttons>button{
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 199, 154);
+    color:  rgb(180, 117, 0);
+    font-weight: bold;
+    border: orange solid 3px;
+    margin-left: 11px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+#stageClearBackDiv>div>div #stageClear_buttons>button:hover,
+#stageFailBackDiv>div>div #stageFail_buttons>button:hover{
+    background-color: rgba(255, 166, 0, 0.685);
+    color:  white;
+    border:  rgb(200, 60, 17) solid 2px;
+}
+
+#restart_this{
+    background-color:rgb(255, 206, 191);
+    color: rgb(190, 52, 10);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 10%;
+    height: 5.5%;
+    border: solid orange 3px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    /* display: flex; */
+    margin-left: 45%;
+    margin-top: 395px;
+    display: none;
+    font-size: 10px;
+}
+#back{
+    width: 700px;
+    height: 500px;
+    background-color: white;
+
+}
+#mainDiv{
+    background-image:url(../images/base.jpg);
+    height: 298px;
+    margin-top: 70px;
+    margin-left: 7px;
+    border:  rgb(255, 219, 151) solid 3px;
+    width:680px;
+    background-color: rgb(251, 239, 216);
+    border-radius: 10px;
+}
+#imgDiv{
+    /* border: orangered solid 2px; */
+    width: 260px; 
+    height: 260px;
+    /* background-color: rgba(255, 166, 0, 0.486); */
+    border-radius: 10px;
+    margin-left: 224px;
+    margin-top: 38px;
+}
+#back{
+    border: 3px black solid;
+    /* display: block; */
+}
+#chance_div,#socre_div,#time_div,#setting_div{
+    height: 50px;
+    float: left;
+}
+
+#top_div{
+    /* display: block; */
+
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#chance_div{
+    margin-left: 10px;
+    width: 140px;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    border: rgb(255, 219, 151) solid 4px;
+    margin-top: -2px;
+    border-radius: 10px;
+    background-color: rgb(251, 239, 216);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#socre_div{
+    width: 150px;
+    margin-left: 20px;
+    border: rgb(255, 219, 151) solid 4px;
+    text-align: center;
+    font-size: 37px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(251, 239, 216);
+    margin-top: -2px;
+}
+#time_div{
+    width: 150px;
+    margin-left: 135px;
+    text-align: center;
+    border: rgb(255, 219, 151) solid 4px;
+    border-radius: 10px;
+    background-color: rgb(255, 186, 154);
+    border-radius: 10px;
+    margin-top: -2px;
+
+}
+#setting_div{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-top: -5px;
+}
+#setting_btn{
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    color: lightcoral;
+    background-color: rgba(255, 223, 223, 0);
+    border: rgba(240, 128, 128, 0) solid 3px;
+}
+#setting_btn :hover{
+    color: rgb(240, 105, 105);
+    font-size: 50px;
+}
+#setting_btn:active{
+    color: rgb(126, 57, 57);
+}
+
+#setting_buttons_div{
+    width: 150px;
+    background-color: rgb(255, 251, 233);
+    border: 3px rgb(241, 136, 154) solid;
+    border-radius: 10px;
+    margin-left: -120px;
+    margin-top: 3px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    display: none;
+}
+.popBtns{
+    width: 130px;
+    margin-top: 2px;
+    background-color: rgb(255, 223, 223);
+    border: 2px rgb(241, 136, 154) solid;
+    font-weight: 600;
+    color: rgba(82, 0, 27, 0.993);
+
+}
+.popBtns:hover{
+    background-color:rgb(241, 136, 154);
+    color: rgb(255, 247, 233);
+}
+.popBtns:active{
+    background-color:rgb(207, 112, 128);
+    
+}
+#chance_text{
+    font-size: 50px;
+    
+}
+#timecheck{
+    font-size: 35px;
+    font-weight: bolder;
+    
+}
+#keyDiv{
+    border: 5px rgb(241, 136, 154) dotted;
+    width: 680px;
+    height: 100px;
+    margin-left: 5px;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 70px;
+    border-radius: 10px;
+    background-color: rgb(255, 251, 233);
+}
+#keyTable tr>td{
+    /* padding-left: 15px; */
+    width: 30px;
+    font-size: 23px;
+    border-radius: 50px;
+    background-color: rgb(255, 223, 223);
+    border: lightcoral 4px solid;
+    
+}
+#keyTable{
+    padding-top: 7px;
+    margin-top: 10px;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+}
+
