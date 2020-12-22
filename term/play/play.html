@@ -5,64 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>termProject</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel ="stylesheet" href ="play.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel ="stylesheet" href ="pLAY.css" />
 </head>
 <body>
+    <!-- 스테이지마다 진행되는 스토리를 띄우는 div창 -->
+    <div id="storyBackDiv" >
+        <div>
+            <!-- story 내용을 보여주는 div -->
+            <div id="story_contents"> 
+                <div id="story_chr"><img src="../images/pro_1.png" width="98%" height="98%"></div>
+                <div id="stories">
+                    <div id="story_texts"></div>
+                    <div id="story_buttons">
+                        <!-- 파일로부터 다음 이야기를 불러오기 위한 버튼 next -->
+                        <button id="story_btn_next" >next>></button>
+                        <!-- 파일로부터 이야기를 모두 불러온 후 게임을 진행하기 위한 play버튼 -->
+                        <button id="story_btn_play" >play</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- 보너스 단계를 진행할 때 안내를 위해 잠시 나타나는 div창 -->
+    <div id="BonusBackDiv">
+        <div>
+            <div>
+                <h2 id="partytime">!! Bonus Stage !!</h2>
+                <p>나나의 성장을 질투하는 다른 냥이들이 장난을 치고 갔다!!</p>
+                <p>춤을 추기 위한 방향키를 마구잡이로 섞어놓은 것인데...</p>
+                <p>제한시간은 8초!!</p>
+                <p>무작위로 선정되는 키보드를 찾아 댄스를 마무리하여 슈스가 되어라!!</p>
+                <!-- 버튼 클릭 시 bonus 단계를 진행한다. -->
+                <button id="BonusBackDiv_BTN">알겠어!!</button>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 모든 stage를 clear했을 경우 나타나는 최종 div창.
+    보너스 단계를 진행할지에 대한 여부를 묻는다. -->
+    <div id="AllStageClearBackDiv" >
+        <div>
+            <div id="AllStageClearDiv">
+                <div id="SS">SUPER STAR</div>
+                <div id="AllStageClear_scoreDiv">0</div>
+                <div id="AllStageClear_buttons">
+                    <button id="AllStageClear_quit">종료하기 <i class='fas fa-paw' ></i></button>
+                    <button id="AllStageClear_bonus">BONUS <i class='fas fa-paw' ></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 하나의 스테이지를 clear했을 경우에 나타나는 div창 -->
     <div id="stageClearBackDiv" >
         <div>
             <div id="stageClearDiv">
                 <div id="success">SUCCESS</div>
                 <div id="stageClear_scoreDiv"></div>
                 <div id="stageClear_buttons">
-                    <button id="stageClear_quit">종료하기</button>
-                    <button id="stageClear_keepGoing">계속하기</button>
+                    <button id="stageClear_quit">종료하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageClear_keepGoing">계속하기 <i class='fas fa-paw' ></i></button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- 스테이지를 실패했을 경우 나타나는 div창 -->
     <div id="stageFailBackDiv" >
         <div>
             <div id="stageFailDiv">
                 <div id="lose">LOSE</div>
                 <div id="stageFail_scoreDiv"></div>
                 <div id="stageFail_buttons">
-                    <button id="stageFail_quit">종료하기</button>
-                    <button id="stageFail_restart">다시하기</button>
+                    <button id="stageFail_quit">종료하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageFail_restart_thisStage">다시하기 <i class='fas fa-paw' ></i></button>
+                    <button id="stageFail_restart">돌아가기 <i class='fas fa-paw' ></i></button>
+                </div>
+                <div id="restart_this">
+                    한번의 chance로 현재 스테이지를 다시 진행합니다.
+                </div>
+                <div id="restart">
+                    stage 1부터 다시 게임을 시작합니다.
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- 게임이 진행되는 주된 div -->
     <div id="back">
-        
+        <!-- 게임 메인 화면의 상위 div로 현재까지의 기회, 점수, stage 단계,
+        stage를 clear하기 위해 남아있는 시간, 설정 버튼을 나타낸다. -->
         <div id="top_div">
-                <div id="chance_div"width="200px" height="50px"> </div>
-                <div id="socre_div" width="200px" height="50px"></div>
-                <div id ="time_div" width="200px" height="50px">남은시간 : <span id = "timecheck"></span></div>
+                <div id="chance_div" height="50px"><span id="chance_inner"> </span></div>
+                <div id="socre_div"  height="50px"></div>
+                <div id="stage_num"  height="50px">stage 1</div>
+                <div id ="time_div"  height="50px"><span id = "timecheck">00:00</span></div>
+                <!-- 게임 설정 관련 div -->
                 <div id ="setting_div"  width="200px" height="50px" >
-                    <button id="setting_btn">설정</button>
-                    <div id="dropdown">
-                        <button id ="mute" class="popBtns">🔇</button>
-                        <button id ="stop" class="popBtns">❌</button>
-                        <button id="move_to_Bonus" class="popBtns">🎁</button>
+                    <!-- 설정 버튼 -->
+                    <button id="setting_btn"><i class="fa fa-gear"></i></button>
+                    <!-- 설정 버튼을 클릭하였을 경우 나타나는 버튼들 -->
+                    <div id="setting_buttons_div">
+                        <!-- 음소거, 게임 종료, 보너스단계 이동이 있다. -->
+                        <button id ="mute" class="popBtns">음소거 <i class='fas fa-volume-mute'></i></button>
+                        <button id ="stop" class="popBtns">종료 <i class='far fa-stop-circle'></i></button>
+                        <button id="move_to_Bonus" class="popBtns">보너스 <i class='fas fa-gift'></i></button>
                     </div>
                 </div>
         </div>
+        <!-- 게임이 진행되는 화면이 보이는 div -->
         <div id="mainDiv">
-            <div id="imgDiv">
-
-            </div>
+            <!-- 애니메이팅을 사진이 빠른시간 안에 변경되는 것으로 효과를 대신하였다. -->
+            <div id="imgDiv"></div>
         </div>
-
+        <!-- 게임 진행을 위해 키보드방향키에 관한 정보가 나타나는 div -->
         <div id="keyDiv">
+            <!-- 무작위로 지정된 key값들이 두개의 table row에 거쳐서 출력된다. -->
             <table id="keyTable">
-                <tr id="tableRow">
-                   
-                </tr>
+                <tr id="tableRow_1"></tr>
+                <tr id="tableRow_2"></tr>
             </table>
         </div>
     </div>
 
-    <script src ="play.js"></script>
+    <script src ="play_JS.js"></script>
 </body>
 </html>

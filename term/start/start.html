@@ -13,28 +13,84 @@
 </head>
 <body>
     
-    <div id="base" >
-        
+    <div id="base" >    
         <div id="starting">
-            <div id="game_title"></div>
+            <!-- 게임 타이틀의 영역을 나타내는 div -->
+            <div id="game_title"></div> 
+            <!-- start.html의 안내 버튼 클릭 시 나타나는 <게임 정보>버튼을 클릭하였을 때 나타나는 div -->
+            <div id="info_game">
+                <div><button id="close_game_info">X</button></div>
+                <div>
+                    <h2>고양이와 춤을!</h2>
+                    <div>
+                        <p>무작위로 주어지는 방향키 정보와 일치하게 방향키를 입력하는 게임이다.</p>
+                        <p>관냥골 인기스타인 나나는 관냥골에서 벗어나 전국구 슈퍼스타가 되고 싶은 냥이다.</p>
+                        <p>마침 관냥골에서 유명한 댄스 대회인 "고양이와 춤을!" 이라는 대회가 열리게 되고</p>
+                        <p>나나는 망설임 없이 참여하게 된다.</p>
+                        <p>근데 춤추는 걸 나보고 도와달라고...?</p>
+                        <p>내가??? 어떻게...??</p>
+                    </div>
+                </div>
+            </div>
+            <!-- start.html의 안내 버튼 클릭 시 나타나는 <게임방법>버튼을 클릭하였을 때 나타나는 div -->
+            <div id="HTP">
+                <div><button id="close_howToPlay">X</button></div>
+                <div>
+                    <h2>게임 방법</h2>
+                    <div id="how_to_play_n_info">
+                        <p><strong>1.</strong> play 화면에 방향을 나타내는 그림이 랜덤으로 보여집니다.<br><br>
+                        <img src="../images/game_info_1.png" id="game_info_1"><br><br>
+                            → : 방향키 오른쪽   ← : 방향키 왼쪽     ↑:방향키 위쪽<br>
+                            ↓ : 방향키 아래쪽   ■ : 스페이스바
+                        </p>
+                        <br>
+                        <p><strong>2.</strong> 해당 그림에 맞는 방향키를 누르면 고양이가 춤을 춥니다.</p>
+                        <div id="game_info_2">
+                            <img src="../images/32.png">
+                            <img src="../images/37.png">
+                            <img src="../images/38.png">
+                            ...
+                        </div>
+                        <br>
+
+                        <p><strong>3.</strong> 한 stage를 성공하기 위해서는 무작위로 배치되는 세가지의 키들을<br>
+                             주어지는 세번의 기회 안에 올바르게 입력하면 성공입니다.</p>
+                        <br>
+
+                        <p><strong>4.</strong> stage 별로 입력해야 하는 key의 개수는 많아지고, <br>
+                            stage를 성공하기 위해 주어지는 시간은 짧아집니다.</p>
+                        <br>
+
+                        <p><strong>5.</strong> 보너스 단계는 입력해야 하는 키값이 기존의 방식처럼<br> 
+                            키보드의 방향키와 스페이스바가 아닌 랜덤으로 정해집니다.<br>
+                            주어지는 키값에 해당하는 키보드를 정확하게 누르면 보너스 단계를 <strong>CLEAR!</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 시작 화면의 버튼이 위치해야 할 공간을 지정하기 위한 div -->
             <div id="buttons">
                 <button id="btn_info" class="buttons">안내 <i class='fas fa-info'></i></i></button>
-                <button id="btn_settings" class="buttons">설정<i class="fa fa-gear"></i></button>
                 <button id="btn_start" class="buttons">게임시작<i class='fas fa-paw' ></i></button>
             </div>
+            <!-- 안내 버튼을 클릭하였을 경우 나타나야 하는 div창에 관한 구현 -->
             <div id="infoBackDiv" >
                 <div>
                     <div>
                         <button id="close_info">X</button>
                     </div>
-                    안내중입니다
+                    <div>
+                        <button id="info_for_game">게임정보</button>
+                    </div>
+                    <div>
+                        <button id="howToPlay">게임방법</button>
+                    </div>
                 </div>
             </div>
+            
         </div>
-        <button id="btn_bonus" class="buttons"><i class='fas fa-gift'></i></button>
+        
         
     </div>
-<script src ="start.js"></script>
+<script src ="Start.js"></script>
 </body>
 </html>
-

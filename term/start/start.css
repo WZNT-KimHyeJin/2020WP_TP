@@ -23,7 +23,6 @@ body{
     background-color: rgb(251, 239, 216);
     border-radius: 10px;
     background-size:40px 40px;
-
 }
 #game_title{
     background-image:url(../images/title.png);
@@ -32,20 +31,15 @@ body{
     height: 65px;
     border: rgb(255, 219, 151) solid 5px;
     background-color: rgb(255, 251, 233);
-
-    border-radius: 10px;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-size: 45px;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
     padding-top: 45px;
     padding-bottom: 45px;
-    text-align: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 .buttons{
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 18px;
     padding-left: 20px;
     padding-right: 20px;
@@ -66,7 +60,7 @@ body{
     font-size: 23px;
 }
 #btn_info{
-    margin-left: 25px;
+    margin-left: 70px;
 }
 #btn_start{
     width: 230px;
@@ -74,27 +68,9 @@ body{
     font-weight: bolder;
 }
 #btn_start:hover{
-    
     font-size: 35px;
 }
-#btn_bonus{
-    font-size: 12px;
-    height: 40px;
-    margin-left: 655px;
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: pink;
-    color: rgb(97, 10, 24);
-}
-#btn_bonus:hover{
-    background-color: rgb(212, 105, 123);
-    color: rgb(255, 255, 255);
-    border: rgb(255, 202, 197) 4px solid;
-   
-}
-
-/* information div 관련 적용 */
+/* 안내 버튼 창 관련 적용 */
 #infoBackDiv{
     position: fixed;
     z-index: 1;
@@ -103,14 +79,103 @@ body{
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* display: flex; */
-    display: none;
     justify-content: center;
     align-items: center;
     display: none;
 }
 #infoBackDiv>div{
-    width: 50px;
-    height: 50px;
-    border: olivedrab solid 3px;
+    background-color: rgb(255, 192, 185);
+    color: white;
+    border: rgb(240, 105, 105) 3px solid;
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+    margin-left: 545px;
+    margin-top: 350px;
+}
+#close_info{
+    display: block;
+    margin-left: 270px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    background-color: rgb(255, 191, 184);
+    border: rgba(250, 128, 114, 0) solid 1px;
+    font-weight: bolder;
+    border-radius: 50%;
+}
+#close_info:hover{
+    background-color: rgb(255, 148, 136);
+    border: rgb(255, 230, 228) solid 1px;
+}
+#info_for_game, #howToPlay{
+    float: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color:  rgb(255, 255, 255);
+    color: rgb(212, 105, 123);
+    border: rgb(255, 141, 131)3px solid;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#info_for_game:hover, #howToPlay:hover{
+    background-color: rgb(255, 224, 199);
+    border: orange solid 4px;
+    color:  rgb(151, 99, 3);
+}
+#HTP,#info_game{
+    width: 600px;
+    height: 300px;
+    border: rgb(212, 105, 123) solid 3px;
+    background-color: rgb(255, 224, 199);
+    margin-left: -50px;
+    margin-top: -197px;
+    position: fixed;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: auto;
+    display: none;
+}
+#close_howToPlay,#close_game_info{
+    background-color: rgb(255, 192, 192);
+    border: rgb(240, 105, 105) 2px solid;
+    color: rgb(85, 19, 19);
+    border-radius: 10px;
+}
+#close_howToPlay:hover,#close_game_info:hover{
+    background-color: rgb(136, 48, 48);
+    color: white;
+}
+#info_game>div>div>p,#info_game>div>h2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#close_game_info,#close_howToPlay{
+    margin-left: 540px;
+    margin-top: 5px;
+}
+#HTP>div>h2{
+    margin-left: 20px;
+    font-size: 30px;
+}
+#game_info_1{
+    width: 500px;
+    border: rgb(212, 105, 123) solid 3px;
+    border-radius: 10px;
+}
+#game_info_2>img{
+    width: 100px;
+    border: rgb(212, 105, 123) solid 3px;
+    border-radius: 10px;
+}
+#how_to_play_n_info{
+    margin-left: 20px;
+}
+#how_to_play_n_info>img, #how_to_play_n_info>div{
+    margin-left: 20px;
 }
